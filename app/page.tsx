@@ -12,7 +12,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState<'about' | 'experience' | 'skills' | 'education' | 'contact'>('about');
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground">
       <div className="flex flex-col lg:flex-row">
         {/* Sidebar Navigation */}
         <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />

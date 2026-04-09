@@ -45,7 +45,7 @@ export default function Navigation({ activeSection, onSectionChange }: Navigatio
               onClick={() => onSectionChange(item.id as any)}
               className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all text-sm font-medium whitespace-nowrap lg:w-full ${
                 isActive
-                  ? 'bg-foreground text-background'
+                  ? 'bg-primary text-primary-foreground shadow-md'
                   : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
               }`}
             >

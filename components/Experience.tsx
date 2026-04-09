@@ -62,15 +62,17 @@ export default function Experience() {
         {/* Experience Overview Chart */}
         <div className="mb-12 bg-card rounded-lg p-8 border border-border">
           <h3 className="text-2xl font-bold text-foreground mb-6">Experience Timeline</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={experienceData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-              <XAxis dataKey="role" stroke="#6b7280" angle={-45} textAnchor="end" height={100} interval={0} />
-              <YAxis stroke="#6b7280" />
-              <Tooltip contentStyle={{ backgroundColor: '#f3f4f6', border: '1px solid #d1d5db', borderRadius: '6px' }} />
-              <Bar dataKey="duration" fill="#1f2937" radius={[8, 8, 0, 0]} name="Duration (months)" />
-            </BarChart>
-          </ResponsiveContainer>
+          <div style={{ width: '100%', height: '400px' }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={experienceData} margin={{ top: 20, right: 30, left: 20, bottom: 120 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#cbd5e1" />
+                <XAxis dataKey="role" stroke="#64748b" angle={-35} textAnchor="end" height={120} interval={0} />
+                <YAxis stroke="#64748b" />
+                <Tooltip contentStyle={{ backgroundColor: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '6px', color: '#1a3a52' }} />
+                <Bar dataKey="duration" fill="#2563eb" radius={[8, 8, 0, 0]} name="Duration (months)" />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
 
         <div className="space-y-12">

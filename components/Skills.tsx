@@ -64,31 +64,35 @@ export default function Skills() {
         </h2>
 
         {/* Proficiency Chart */}
-        <div className="mb-12 bg-card rounded-lg p-8 border border-border">
+        <div className="mb-12 bg-card rounded-lg p-8 border border-border shadow-sm hover:shadow-md transition">
           <h3 className="text-2xl font-bold text-foreground mb-6">Technical Proficiency</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={proficiencyData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-              <XAxis dataKey="skill" stroke="#6b7280" />
-              <YAxis stroke="#6b7280" />
-              <Tooltip contentStyle={{ backgroundColor: '#f3f4f6', border: '1px solid #d1d5db', borderRadius: '6px' }} />
-              <Bar dataKey="proficiency" fill="#1f2937" radius={[8, 8, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
+          <div style={{ width: '100%', height: '350px' }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={proficiencyData} margin={{ top: 20, right: 30, left: 20, bottom: 60 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#cbd5e1" />
+                <XAxis dataKey="skill" stroke="#64748b" angle={-35} textAnchor="end" height={80} interval={0} />
+                <YAxis stroke="#64748b" />
+                <Tooltip contentStyle={{ backgroundColor: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '6px', color: '#1a3a52' }} />
+                <Bar dataKey="proficiency" fill="#2563eb" radius={[8, 8, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
 
         {/* Expertise Radar Chart */}
-        <div className="mb-12 bg-card rounded-lg p-8 border border-border">
+        <div className="mb-12 bg-card rounded-lg p-8 border border-border shadow-sm hover:shadow-md transition">
           <h3 className="text-2xl font-bold text-foreground mb-6">Expertise Overview</h3>
-          <ResponsiveContainer width="100%" height={350}>
-            <RadarChart data={expertiseAreasData}>
-              <PolarGrid stroke="#d1d5db" />
-              <PolarAngleAxis dataKey="area" stroke="#6b7280" />
-              <PolarRadiusAxis angle={90} domain={[0, 100]} stroke="#6b7280" />
-              <Radar name="Proficiency %" dataKey="value" stroke="#1f2937" fill="#1f2937" fillOpacity={0.6} />
-              <Tooltip contentStyle={{ backgroundColor: '#f3f4f6', border: '1px solid #d1d5db', borderRadius: '6px' }} />
-            </RadarChart>
-          </ResponsiveContainer>
+          <div style={{ width: '100%', height: '400px' }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <RadarChart data={expertiseAreasData} margin={{ top: 20, right: 20, left: 20, bottom: 20 }}>
+                <PolarGrid stroke="#cbd5e1" />
+                <PolarAngleAxis dataKey="area" stroke="#64748b" fontSize={12} />
+                <PolarRadiusAxis angle={90} domain={[0, 100]} stroke="#cbd5e1" />
+                <Radar name="Proficiency %" dataKey="value" stroke="#2563eb" fill="#3b82f6" fillOpacity={0.6} />
+                <Tooltip contentStyle={{ backgroundColor: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '6px', color: '#1a3a52' }} />
+              </RadarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
 
         {/* Skills Grid */}

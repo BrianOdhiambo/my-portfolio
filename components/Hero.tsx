@@ -17,9 +17,9 @@ export default function Hero() {
 
         {/* About Content */}
         <div className="grid gap-8 mb-12 md:grid-cols-3">
-          <div className="bg-card rounded-lg p-6 border border-border hover:shadow-lg transition">
-            <div className="w-12 h-12 rounded-lg bg-foreground flex items-center justify-center mb-4">
-              <span className="text-background font-bold text-lg">💼</span>
+          <div className="bg-card rounded-lg p-6 border border-border shadow-sm hover:shadow-lg hover:border-primary transition">
+            <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center mb-4 text-white">
+              <span className="font-bold text-lg">💼</span>
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-3">Current Role</h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
@@ -29,9 +29,9 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="bg-card rounded-lg p-6 border border-border hover:shadow-lg transition">
-            <div className="w-12 h-12 rounded-lg bg-foreground flex items-center justify-center mb-4">
-              <span className="text-background font-bold text-lg">⚙️</span>
+          <div className="bg-card rounded-lg p-6 border border-border shadow-sm hover:shadow-lg hover:border-primary transition">
+            <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center mb-4 text-white">
+              <span className="font-bold text-lg">⚙️</span>
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-3">Technical Stack</h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
@@ -39,9 +39,9 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="bg-card rounded-lg p-6 border border-border hover:shadow-lg transition">
-            <div className="w-12 h-12 rounded-lg bg-foreground flex items-center justify-center mb-4">
-              <span className="text-background font-bold text-lg">🎯</span>
+          <div className="bg-card rounded-lg p-6 border border-border shadow-sm hover:shadow-lg hover:border-primary transition">
+            <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center mb-4 text-white">
+              <span className="font-bold text-lg">🎯</span>
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-3">Leadership Impact</h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
@@ -59,7 +59,7 @@ export default function Hero() {
                 href="https://github.com/BrianOdhiambo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-lg font-medium hover:opacity-90 transition"
+                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-md hover:bg-blue-600 transition"
               >
                 <Github size={20} />
                 <span>GitHub</span>
@@ -68,14 +68,14 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/brian-odhiambo-6b036b181/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-lg font-medium hover:opacity-90 transition"
+                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-md hover:bg-blue-600 transition"
               >
                 <Linkedin size={20} />
                 <span>LinkedIn</span>
               </a>
               <a
                 href="mailto:brianodhiambo530@gmail.com"
-                className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-lg font-medium hover:opacity-90 transition"
+                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-md hover:bg-blue-600 transition"
               >
                 <Mail size={20} />
                 <span>Email</span>
