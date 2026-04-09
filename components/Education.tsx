@@ -2,28 +2,28 @@ import { BookOpen, Award } from 'lucide-react';
 
 export default function Education() {
   return (
-    <section className="lg:pl-80 p-6 lg:p-12 min-h-screen py-20">
+    <section className="lg:pl-80 px-4 lg:p-12 min-h-screen py-20 pt-24 lg:pt-20">
       <div className="max-w-4xl">
-        <h2 className="text-4xl font-bold text-foreground mb-12 flex items-center gap-3">
-          <BookOpen size={32} />
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 flex items-center gap-3">
+          <BookOpen size={28} className="hidden md:block" />
           Education & Certifications
         </h2>
 
         {/* Formal Education */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
             <span className="text-foreground">🎓</span> Formal Education
           </h3>
           
-          <div className="bg-card rounded-lg p-6 border border-border hover:border-foreground transition">
+          <div className="bg-card rounded-lg p-4 md:p-6 border border-border hover:border-foreground transition">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4 gap-2">
               <div>
-                <h4 className="text-xl font-bold text-foreground">Bachelor of Science in Information Technology</h4>
-                <p className="text-lg text-muted-foreground">Zetech University</p>
+                <h4 className="text-lg md:text-xl font-bold text-foreground">Bachelor of Science in Information Technology</h4>
+                <p className="text-base md:text-lg text-muted-foreground">Zetech University</p>
               </div>
-              <p className="text-sm font-medium text-muted-foreground whitespace-nowrap">September 2016 - December 2020</p>
+              <p className="text-xs md:text-sm font-medium text-muted-foreground whitespace-nowrap">September 2016 - December 2020</p>
             </div>
-            <div className="text-muted-foreground">
+            <div className="text-muted-foreground text-sm md:text-base">
               <p className="font-medium">Grade: Second Class Upper Division</p>
               <p className="mt-2">Focused on software development, databases, and information systems design.</p>
             </div>
@@ -32,19 +32,19 @@ export default function Education() {
 
         {/* Professional Certifications */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <Award size={24} /> Professional Certifications
+          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+            <Award size={22} /> Professional Certifications
           </h3>
           
-          <div className="bg-card rounded-lg p-6 border border-border hover:border-foreground transition">
+          <div className="bg-card rounded-lg p-4 md:p-6 border border-border hover:border-foreground transition">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4 gap-2">
               <div>
-                <h4 className="text-xl font-bold text-foreground">Certification in Data Science</h4>
-                <p className="text-lg text-muted-foreground">10 Academy (Remote)</p>
+                <h4 className="text-lg md:text-xl font-bold text-foreground">Certification in Data Science</h4>
+                <p className="text-base md:text-lg text-muted-foreground">10 Academy (Remote)</p>
               </div>
-              <p className="text-sm font-medium text-muted-foreground whitespace-nowrap">June 2020 - September 2020</p>
+              <p className="text-xs md:text-sm font-medium text-muted-foreground whitespace-nowrap">June 2020 - September 2020</p>
             </div>
-            <div className="text-muted-foreground space-y-2">
+            <div className="text-muted-foreground space-y-2 text-sm md:text-base">
               <p><span className="font-medium text-foreground">Core Focus Areas:</span></p>
               <ul className="space-y-1 ml-4">
                 <li>• Python & SQL Programming for Data Science</li>
@@ -64,20 +64,20 @@ export default function Education() {
 
         {/* Continuous Learning */}
         <div>
-          <h3 className="text-2xl font-bold text-foreground mb-6">Continuous Learning</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-card rounded-lg p-6 border border-border">
-              <h4 className="text-lg font-bold text-foreground mb-3">Machine Learning</h4>
-              <p className="text-muted-foreground mb-4">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6">Continuous Learning</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="bg-card rounded-lg p-4 md:p-6 border border-border">
+              <h4 className="text-base md:text-lg font-bold text-foreground mb-3">Machine Learning</h4>
+              <p className="text-muted-foreground mb-4 text-sm md:text-base">
                 Continuously updating expertise in ML model development, including recommender systems, computer vision, and NLP.
               </p>
-              <div className="space-y-1 text-sm">
+              <div className="space-y-1 text-xs md:text-sm">
                 <p className="text-foreground font-medium">Focus: scikit-learn, TensorFlow, advanced algorithms</p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 border border-border">
-              <h4 className="text-lg font-bold text-foreground mb-3">Full-Stack Development</h4>
+            <div className="bg-card rounded-lg p-4 md:p-6 border border-border">
+              <h4 className="text-base md:text-lg font-bold text-foreground mb-3">Full-Stack Development</h4>
               <p className="text-muted-foreground mb-4">
                 Staying current with modern web development practices, cloud deployment, and infrastructure as code.
               </p>

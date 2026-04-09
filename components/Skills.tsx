@@ -56,21 +56,21 @@ const skillCategories: SkillCategory[] = [
 
 export default function Skills() {
   return (
-    <section className="lg:pl-80 p-6 lg:p-12 min-h-screen py-20">
+    <section className="lg:pl-80 px-4 lg:p-12 min-h-screen py-20 pt-24 lg:pt-20">
       <div className="max-w-4xl">
-        <h2 className="text-4xl font-bold text-foreground mb-12 flex items-center gap-3">
-          <Award size={32} />
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 flex items-center gap-3">
+          <Award size={28} className="hidden md:block" />
           Skills & Expertise
         </h2>
 
         {/* Proficiency Chart */}
-        <div className="mb-12 bg-card rounded-lg p-8 border border-border shadow-sm hover:shadow-md transition">
-          <h3 className="text-2xl font-bold text-foreground mb-6">Technical Proficiency</h3>
-          <div style={{ width: '100%', height: '350px' }}>
+        <div className="mb-12 bg-card rounded-lg p-4 md:p-8 border border-border shadow-sm hover:shadow-md transition overflow-x-auto">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6">Technical Proficiency</h3>
+          <div style={{ width: '100%', height: '300px', minWidth: '400px' }}>
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={proficiencyData} margin={{ top: 20, right: 30, left: 20, bottom: 60 }}>
+              <BarChart data={proficiencyData} margin={{ top: 20, right: 20, left: 10, bottom: 80 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#cbd5e1" />
-                <XAxis dataKey="skill" stroke="#64748b" angle={-35} textAnchor="end" height={80} interval={0} />
+                <XAxis dataKey="skill" stroke="#64748b" angle={-40} textAnchor="end" height={80} interval={0} fontSize={12} />
                 <YAxis stroke="#64748b" />
                 <Tooltip contentStyle={{ backgroundColor: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '6px', color: '#1a3a52' }} />
                 <Bar dataKey="proficiency" fill="#2563eb" radius={[8, 8, 0, 0]} />
@@ -80,13 +80,13 @@ export default function Skills() {
         </div>
 
         {/* Expertise Radar Chart */}
-        <div className="mb-12 bg-card rounded-lg p-8 border border-border shadow-sm hover:shadow-md transition">
-          <h3 className="text-2xl font-bold text-foreground mb-6">Expertise Overview</h3>
-          <div style={{ width: '100%', height: '400px' }}>
+        <div className="mb-12 bg-card rounded-lg p-4 md:p-8 border border-border shadow-sm hover:shadow-md transition">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6">Expertise Overview</h3>
+          <div style={{ width: '100%', height: '350px' }}>
             <ResponsiveContainer width="100%" height="100%">
-              <RadarChart data={expertiseAreasData} margin={{ top: 20, right: 20, left: 20, bottom: 20 }}>
+              <RadarChart data={expertiseAreasData} margin={{ top: 20, right: 10, left: 10, bottom: 20 }}>
                 <PolarGrid stroke="#cbd5e1" />
-                <PolarAngleAxis dataKey="area" stroke="#64748b" fontSize={12} />
+                <PolarAngleAxis dataKey="area" stroke="#64748b" fontSize={11} />
                 <PolarRadiusAxis angle={90} domain={[0, 100]} stroke="#cbd5e1" />
                 <Radar name="Proficiency %" dataKey="value" stroke="#2563eb" fill="#3b82f6" fillOpacity={0.6} />
                 <Tooltip contentStyle={{ backgroundColor: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '6px', color: '#1a3a52' }} />
@@ -96,15 +96,15 @@ export default function Skills() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid gap-8 md:grid-cols-2 mb-12">
+        <div className="grid gap-4 md:gap-8 grid-cols-1 md:grid-cols-2 mb-12">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-card rounded-lg p-6 border border-border hover:border-foreground transition">
-              <h3 className="text-xl font-bold text-foreground mb-4">{category.category}</h3>
+            <div key={index} className="bg-card rounded-lg p-4 md:p-6 border border-border hover:border-foreground transition">
+              <h3 className="text-lg md:text-xl font-bold text-foreground mb-4">{category.category}</h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="inline-block px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm font-medium"
+                    className="inline-block px-2 md:px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs md:text-sm font-medium"
                   >
                     {skill}
                   </span>

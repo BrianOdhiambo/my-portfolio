@@ -52,21 +52,21 @@ const jobs: Job[] = [
 
 export default function Experience() {
   return (
-    <section className="lg:pl-80 p-6 lg:p-12 min-h-screen py-20">
+    <section className="lg:pl-80 px-4 lg:p-12 min-h-screen py-20 pt-24 lg:pt-20">
       <div className="max-w-4xl">
-        <h2 className="text-4xl font-bold text-foreground mb-12 flex items-center gap-3">
-          <Briefcase size={32} />
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 flex items-center gap-3">
+          <Briefcase size={28} className="hidden md:block" />
           Professional Experience
         </h2>
 
         {/* Experience Overview Chart */}
-        <div className="mb-12 bg-card rounded-lg p-8 border border-border">
-          <h3 className="text-2xl font-bold text-foreground mb-6">Experience Timeline</h3>
-          <div style={{ width: '100%', height: '400px' }}>
+        <div className="mb-12 bg-card rounded-lg p-4 md:p-8 border border-border overflow-x-auto">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6">Experience Timeline</h3>
+          <div style={{ width: '100%', height: '300px', minWidth: '400px' }}>
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={experienceData} margin={{ top: 20, right: 30, left: 20, bottom: 120 }}>
+              <BarChart data={experienceData} margin={{ top: 20, right: 20, left: 10, bottom: 100 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#cbd5e1" />
-                <XAxis dataKey="role" stroke="#64748b" angle={-35} textAnchor="end" height={120} interval={0} />
+                <XAxis dataKey="role" stroke="#64748b" angle={-40} textAnchor="end" height={100} interval={0} fontSize={12} />
                 <YAxis stroke="#64748b" />
                 <Tooltip contentStyle={{ backgroundColor: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '6px', color: '#1a3a52' }} />
                 <Bar dataKey="duration" fill="#2563eb" radius={[8, 8, 0, 0]} name="Duration (months)" />
@@ -92,19 +92,19 @@ export default function Experience() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 bg-card rounded-lg p-6 border border-border">
+                <div className="flex-1 bg-card rounded-lg p-4 md:p-6 border border-border">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4 gap-2">
                     <div>
-                      <h3 className="text-2xl font-bold text-foreground">{job.title}</h3>
-                      <p className="text-lg text-muted-foreground">{job.company}</p>
+                      <h3 className="text-xl md:text-2xl font-bold text-foreground">{job.title}</h3>
+                      <p className="text-base md:text-lg text-muted-foreground">{job.company}</p>
                     </div>
-                    <p className="text-sm font-medium text-muted-foreground whitespace-nowrap">{job.period}</p>
+                    <p className="text-xs md:text-sm font-medium text-muted-foreground whitespace-nowrap">{job.period}</p>
                   </div>
 
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 md:space-y-3">
                     {job.responsibilities.map((responsibility, idx) => (
-                      <li key={idx} className="flex gap-3 text-muted-foreground leading-relaxed">
-                        <span className="text-foreground mt-1">→</span>
+                      <li key={idx} className="flex gap-3 text-muted-foreground leading-relaxed text-sm md:text-base">
+                        <span className="text-foreground mt-1 flex-shrink-0">→</span>
                         <span>{responsibility}</span>
                       </li>
                     ))}

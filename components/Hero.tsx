@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -6,13 +6,27 @@ export default function Hero() {
       <div className="max-w-4xl w-full">
         {/* Main Heading */}
         <div className="mb-8">
-          <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
-            Versatile Software Engineer & Data Scientist
-          </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            I build scalable backend systems with Django and REST APIs, design modern UIs with React, and develop machine learning models. 
-            Experienced in bridging data and engineering with proven success in leading teams, driving impactful insights, and supporting technology advancement.
-          </p>
+          
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-0 items-start lg:items-center">
+          
+            {/* Image - Mobile Only */}
+            <div>
+                
+                <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
+                  
+                  Versatile Software Engineer & Data Scientist
+                </h2>
+                
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+               
+                I build scalable backend systems with Django and REST APIs,
+                design modern UIs with React, and develop machine learning
+                models. Experienced in bridging data and engineering with proven
+                success in leading teams, driving impactful insights, and
+                supporting technology advancement.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* About Content */}
@@ -21,11 +35,17 @@ export default function Hero() {
             <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center mb-4 text-white">
               <span className="font-bold text-lg">💼</span>
             </div>
-            <h3 className="text-lg font-semibold text-foreground mb-3">Current Role</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-3">
+              Current Role
+            </h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              <span className="font-medium text-foreground">Engineering Lead at Datawise Africa</span> (Jan 2022 - Present)
+              <span className="font-medium text-foreground">
+                Engineering Lead at Datawise Africa
+              </span>{" "}
+              (Jan 2022 - Present)
               <br />
-              Leading software and data engineering projects with a cross-functional team.
+              Leading software and data engineering projects with a
+              cross-functional team.
             </p>
           </div>
 
@@ -33,9 +53,12 @@ export default function Hero() {
             <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center mb-4 text-white">
               <span className="font-bold text-lg">⚙️</span>
             </div>
-            <h3 className="text-lg font-semibold text-foreground mb-3">Technical Stack</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-3">
+              Technical Stack
+            </h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              Python, Django, React, BigQuery, Machine Learning, Docker, and more. Proficient in building scalable systems and data pipelines.
+              Python, Django, React, BigQuery, Machine Learning, Docker, and
+              more. Proficient in building scalable systems and data pipelines.
             </p>
           </div>
 
@@ -43,9 +66,12 @@ export default function Hero() {
             <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center mb-4 text-white">
               <span className="font-bold text-lg">🎯</span>
             </div>
-            <h3 className="text-lg font-semibold text-foreground mb-3">Leadership Impact</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-3">
+              Leadership Impact
+            </h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              Mentoring teams, driving product decisions, and bridging data science with engineering to deliver impactful solutions.
+              Mentoring teams, driving product decisions, and bridging data
+              science with engineering to deliver impactful solutions.
             </p>
           </div>
         </div>
@@ -53,7 +79,9 @@ export default function Hero() {
         {/* CTA and Social Links */}
         <div className="flex flex-col gap-6">
           <div>
-            <h3 className="text-lg font-semibold text-foreground mb-4">Connect With Me</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-4">
+              Connect With Me
+            </h3>
             <div className="flex gap-4">
               <a
                 href="https://github.com/BrianOdhiambo"

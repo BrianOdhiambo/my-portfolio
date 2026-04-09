@@ -16,9 +16,9 @@ export default function Navigation({ activeSection, onSectionChange }: Navigatio
   ];
 
   return (
-    <aside className="lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:w-64 lg:bg-card lg:border-r lg:border-border lg:overflow-y-auto flex flex-col lg:p-8 p-6 lg:sticky">
-      {/* Profile Section */}
-      <div className="flex flex-col items-center lg:items-start mb-8">
+    <aside className="w-full bg-card border-b border-border lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:w-64 lg:border-r lg:border-b-0 lg:overflow-y-auto flex lg:flex-col justify-between lg:p-8 p-4 lg:sticky">
+      {/* Profile Section - Hidden on mobile */}
+      <div className="hidden lg:flex flex-col items-start mb-8">
         <div className="relative mb-4">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/passport-pic-29f5PDMoYjeDA5YGfFTaKWIWPyAEQK.jpg"
@@ -28,14 +28,14 @@ export default function Navigation({ activeSection, onSectionChange }: Navigatio
             className="rounded-lg object-cover"
           />
         </div>
-        <h1 className="text-2xl font-bold text-foreground text-center lg:text-left">Brian Odhiambo</h1>
-        <p className="text-muted-foreground text-sm mt-2 text-center lg:text-left">Engineering Lead & Full-Stack Developer</p>
+        <h1 className="text-2xl font-bold text-foreground">Brian Odhiambo</h1>
+        <p className="text-muted-foreground text-sm mt-2">Engineering Lead & Full-Stack Developer</p>
       </div>
 
       <div className="hidden lg:block h-px bg-border mb-8" />
 
       {/* Navigation Links */}
-      <nav className="flex lg:flex-col gap-2 lg:gap-1 flex-wrap justify-center lg:justify-start">
+      <nav className="flex lg:flex-col gap-1 flex-wrap justify-start lg:justify-start w-full lg:w-auto">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeSection === item.id;
@@ -43,14 +43,14 @@ export default function Navigation({ activeSection, onSectionChange }: Navigatio
             <button
               key={item.id}
               onClick={() => onSectionChange(item.id as any)}
-              className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all text-sm font-medium whitespace-nowrap lg:w-full ${
+              className={`flex items-center gap-3 px-3 py-2 lg:px-4 lg:py-3 rounded-lg transition-all text-xs lg:text-sm font-medium whitespace-nowrap lg:w-full flex-1 lg:flex-none justify-center lg:justify-start ${
                 isActive
                   ? 'bg-primary text-primary-foreground shadow-md'
                   : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
               }`}
             >
               <Icon size={16} />
-              <span className="hidden lg:inline">{item.label}</span>
+              <span className="inline lg:inline">{item.label}</span>
             </button>
           );
         })}
